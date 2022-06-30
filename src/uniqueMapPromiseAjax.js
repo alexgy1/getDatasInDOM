@@ -69,6 +69,9 @@ const saveToFile = ({ map, url = null, $ = null }) => {
 
 serialPromise(URLS).then((res) => {
   //res is unique map
+  let vals = Object.keys(res);
+  console.log(vals);
+
   console.log('res', Object.keys(res).length);
   saveToFile({ map: res });
 });
